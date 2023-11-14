@@ -33,3 +33,18 @@
 \NewDocumentCommand{\Mediatio}{m}{#1~\GreStar}
 \NewDocumentCommand{\Flexa}{m}{#1~\GreDagger}
 \NewDocumentCommand{\Terminatio}{m}{#1~\Antiphona}
+
+\NewDocumentCommand{\AllowPageFlush}{}{
+  \clearpage%
+}
+
+\NewDocumentCommand{\AllowPageBreak}{}{
+  \clearpage\hbox{}\newpage%
+}
+
+\NewDocumentCommand{\MakeAntiphon}{m m}{%
+  \begin{itemize}
+    \item[\Antiphona] #1
+    \item[] \emph{#2}
+  \end{itemize}%
+}
