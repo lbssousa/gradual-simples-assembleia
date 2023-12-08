@@ -43,8 +43,12 @@
 }
 
 \NewDocumentCommand{\MakeAntiphon}{m m}{%
-  \begin{itemize}
-    \item[\Antiphona] #1
-    \item[] \emph{#2}
-  \end{itemize}%
+  \begin{paracol}{2}
+    \begin{itemize}
+      \item[\Antiphona] \textbf{#1}
+            \switchcolumn
+      \item[\Antiphona] \textbf{\emph{#2}}
+            \switchcolumn*
+    \end{itemize}%
+  \end{paracol}
 }
